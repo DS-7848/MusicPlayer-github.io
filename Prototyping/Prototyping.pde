@@ -9,6 +9,7 @@ float lyricsHeight = appHeight * 1/2;
 
 //
 rect(lyricsX, lyricsY, lyricsWidth, lyricsHeight);
+rect(baseX, baseY, lyricsWidth, lyricsHeight);
 rect(timeX, timeY, timeWidth, timeHeight);
 rect(authorX, authorY, authorWidth, authorHeight);
 rect(buttonsX, buttonsY, buttonsWidth, buttonsHeight);
