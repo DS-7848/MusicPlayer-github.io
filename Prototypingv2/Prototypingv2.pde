@@ -49,3 +49,11 @@ float forwardY = appHeight * 18.5/23;
 float forwardWidth = appWidth * 4.5/15.5;
 float forwardHeight = appHeight * 3/23;
 rect(forwardX, forwardY, forwardWidth, forwardHeight);
+
+float playX1 = playX * 7.5/19.375;
+float playY1 = playY * 1/4;
+float playX2 = playX * 3/4;
+float playY2 = playY * 1/2;
+float playX3 = playX * 7.5/19.375;
+float playY3 = playY * 13.875/23;
+triangle(playX1, playY1, playX2, playY2, playX3, playY3); work in progress. playX1 was playX/4 and then added to the original X of the play button
