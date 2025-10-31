@@ -1,0 +1,4 @@
+Base will be the image of for the photo.
+Song will be the title of the song.
+Author will be name of author(s).
+Lyrics will be the lyrics to the song
