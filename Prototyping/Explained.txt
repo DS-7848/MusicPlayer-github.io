@@ -1,3 +1,4 @@
-Base Variant
-Not symmetrical
-Base numbers off graph
+Prototypingv1 is the original rough draft.
+Prototypingv2 was a slightly edited version containing rounded numbers for simplicity.
+Prototyping_Primary is my actual project that I am working on as of November 3rd, 2025.
+Testing_Process is just for me to test edits that I may make to my project so I can compare the edit to what I currently have.

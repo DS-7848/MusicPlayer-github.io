@@ -1,1 +1,0 @@
-Try swapping X dimension with the Y dimension and see if it looks better than it currently does. Only certain codes can swap, buttons for example can not due to the way it would look
