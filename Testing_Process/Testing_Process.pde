@@ -44,20 +44,20 @@ float reverseWidth = buttonsWidth * 1/4;
 float reverseHeight = buttonsHeight * 1;
 rect(reverseX, reverseY, reverseWidth, reverseHeight);
 
-float stopX = buttonsX + buttonsWidth * 3/4;
+float stopX = buttonsX + buttonsWidth * 1/4;
 float stopY = buttonsY + buttonsHeight * 0;
 float stopWidth = buttonsWidth * 1/4;
 float stopHeight = buttonsHeight * 1;
 rect(stopX, stopY, stopWidth, stopHeight);
 
 
-float playX = buttonsX + buttonsWidth * 1/4;
+float playX = buttonsX + buttonsWidth * 2/4;
 float playY = buttonsY + buttonsHeight * 0;
 float playWidth = buttonsWidth * 1/4;
 float playHeight = buttonsHeight * 1;
 rect(playX, playY, playWidth, playHeight);
 
-float forwardX = buttonsX + buttonsWidth * 2/4;
+float forwardX = buttonsX + buttonsWidth * 3/4;
 float forwardY = buttonsY + buttonsHeight * 0;
 float forwardWidth = buttonsWidth * 1/4;
 float forwardHeight = buttonsHeight * 1;
