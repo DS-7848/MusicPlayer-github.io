@@ -2,3 +2,6 @@ Prototypingv1 is the original rough draft.
 Prototypingv2 was a slightly edited version containing rounded numbers for simplicity.
 Prototyping_Primary is my actual project that I am working on as of November 3rd, 2025.
 Testing_Process is just for me to test edits that I may make to my project so I can compare the edit to what I currently have.
+
+I moved Prototyping_Primary into the "Primary" folder so that my edits were't overlapping because it tried to open all 4 at once and wasn't wokring the way I wanted it to.
+I moved Testing_process into the "Testing" folder for the same reason as Prototyping_Primary.
