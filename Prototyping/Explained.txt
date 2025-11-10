@@ -5,4 +5,4 @@ Testing_Process is just for me to test edits that I may make to my project so I 
 
 I moved Prototyping_Primary into the "Primary" folder so that my edits were't overlapping because it tried to open all 4 at once and wasn't wokring the way I wanted it to.
 I moved Testing_process into the "Testing" folder for the same reason as Prototyping_Primary.
-I moved Prototypingv1 and Prototypingv2 into the previous versions folder so that I know those versions are outdated.
+I moved Prototypingv1 and Prototypingv2 into the "Previous versions" folder so that I know those versions are outdated.
