@@ -16,3 +16,5 @@ String upArrow = "../../";
 String folder = "Images/";
 String BestOfMe = "BestOfMe";
 String fileExtensionJPG = ".jpg";
+String imagePathway1 = upArrow + folder + BestOfMe + fileExtensionJPG;
+println("BestOfMe Pathway:", imagePathway1);
