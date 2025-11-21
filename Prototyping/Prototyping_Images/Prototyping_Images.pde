@@ -14,5 +14,5 @@ println("Display VARS", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\
 //Directory or Pathway, Concatenation
 String upArrow = "../../";
 String folder = "Images/";
-String Best Of Me = "Best Of Me";
+String BestOfMe = "BestOfMe";
 String fileExtensionJPG = ".jpg";
