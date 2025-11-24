@@ -29,7 +29,7 @@ PImage image1 = loadImage( imagePathway1 );
 int imageWidth1 = 500;
 int imageHeight1 = 500;
 //Aspect Ratio
-//float image1AspectRatio_GreaterOne = () ? : ;
+float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? imageWidth1/imageHeight1 : imageHeight1/imageWidth1 ;
 //
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
