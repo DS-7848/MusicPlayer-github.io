@@ -31,6 +31,7 @@ int imageHeight1 = 500;
 //Aspect Ratio
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? imageWidth1/imageHeight1 : imageHeight1/imageWidth1 ;
 //
+println(image1AspectRatio_GreaterOne);
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
