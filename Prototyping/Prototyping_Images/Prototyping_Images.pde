@@ -12,7 +12,7 @@ println("Display VARS", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\
 //
 //Population
 float imageDivX = appWidth*1/4;
-float imageDivY = appHeight*1/6;
+float imageDivY = appHeight*1/10;
 float imageDivWidth = appWidth*1/2;
 float imageDivHeight = appHeight*4/5;
 //
@@ -29,7 +29,7 @@ PImage image1 = loadImage( imagePathway1 );
 int imageWidth1 = 500;
 int imageHeight1 = 500;
 //Aspect Ratio
-float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? imageWidth1/imageHeight1 : imageHeight1/imageWidth1 ;
+float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ;
 //
 println(image1AspectRatio_GreaterOne);
 //DIV
