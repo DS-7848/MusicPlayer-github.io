@@ -31,7 +31,7 @@ int imageHeight1 = 500;
 //Aspect Ratio
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ;
 //
-println(image1AspectRatio_GreaterOne);
+println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
