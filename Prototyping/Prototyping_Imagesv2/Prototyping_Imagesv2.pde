@@ -52,7 +52,12 @@ imageDivWidth, imageDivHeight
 //if () {} else {} //End If Aspect Ratio
 if ( imageHeightAdjusted1 > imageDivHeight) {
   println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
-  exit();
+  //exit();
+  while ( imageHeightAdjusted1>imageDivHeight ) {
+    imageWidthAdjusted1 *= 0.99;
+    imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
+    //println("Inspection of percent decrease:", imageWidthAdjusted1, imageHeightAdjusted1")
+  }
   //
 }
 //
