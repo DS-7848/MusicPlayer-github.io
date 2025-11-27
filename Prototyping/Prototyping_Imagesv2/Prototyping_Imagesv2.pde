@@ -25,7 +25,13 @@ String fileExtensionJPG = ".jpg";
 String imagePathway1 = upArrow + folder + BestOfMe + fileExtensionJPG;
 //println("BestOfMe Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
+//
+//Possible ERROR: NullPointerException
 PImage image1 = loadImage( imagePathway1 );
+if ( image1 == null) {
+  println("NullPointerException on Image ... Spelling Mistake with Pathway Concatenation");
+}
+// 
 int imageWidth1 = 500;
 int imageHeight1 = 500;
 //Aspect Ratio
