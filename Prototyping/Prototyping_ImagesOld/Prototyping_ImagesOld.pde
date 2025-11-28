@@ -4,8 +4,8 @@
 */
 //
 //Display
-//fullScreen(); //Landscape
-size(500, 700); //portrait
+fullScreen(); //Landscape
+//size(500, 700); //portrait
 int appWidth = displayWidth; //width:500
 int appHeight = displayHeight; //height:700
 println("Display VARS", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\tSet Values, width:"+width, "height:"+height);
@@ -25,13 +25,7 @@ String fileExtensionJPG = ".jpg";
 String imagePathway1 = upArrow + folder + BestOfMe + fileExtensionJPG;
 //println("BestOfMe Pathway:", imagePathway1);
 //Image Loading & Aspect Ratio
-//
-//Possible ERROR: NullPointerException
 PImage image1 = loadImage( imagePathway1 );
-if ( image1 == null) {
-  println("NullPointerException on Image ... Spelling Mistake with Pathway Concatenation");
-}
-// 
 int imageWidth1 = 500;
 int imageHeight1 = 500;
 //Aspect Ratio
@@ -39,8 +33,6 @@ float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(ima
 //
 println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
 //Algorithm Decisions (choice)
-float imageWidthAdjusted1 = imageDivWidth;
-float imageHeightAdjusted1 = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 * image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ;
 //Aspect Ratio
 /*
 imageWidth1
@@ -50,22 +42,11 @@ imageDivHeight1
 imageDivWidth, imageDivHeight
 */
 //if () {} else {} //End If Aspect Ratio
-if ( imageHeightAdjusted1 > imageDivHeight) {
-  println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
-  //exit();
-  while ( imageHeightAdjusted1>imageDivHeight ) {
-    imageWidthAdjusted1 *= 0.99;
-    imageHeightAdjusted1 = imageWidthAdjusted1/image1AspectRatio_GreaterOne;
-    //println("Inspection of percent decrease:", imageWidthAdjusted1, imageHeightAdjusted1")
-  }
-  //
-}
-//
+
+
 
 //DIV
 rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 //
-//image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
-image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
-//
-//End Program
+image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+//image( image1, imageDivX, imageDivY, imageWidthAdjusted, imageHeightAdjusted );
