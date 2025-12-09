@@ -32,7 +32,16 @@ String gabriola = "Gabriola";
 titleFont = createFont (gabriola, fontSize);
 //Tools / Creat Font / Find Font / Do Not Press "OK"
 println(fontSize, gabriola, titleFont);
-fontSize = 52.0;
+float fontSizeGabriola = 80.0;
+println("Font Size", fontSize);
+/* Aspect Ratio Manipulations (Changed to variables)
+ - choose Aspect Ratio that must be multiplied: fontSize/titleHeight
+ - Rewriting fontSize with formulae
+*/
+float gabriolaAspectRatio = fontSizeGabriola / stringDivHeight;
+fontSize = stringDivHeight*gabriolaAspectRatio;
+println("gabriola Aspect Ratio:", gabriolaAspectRatio);
+println(); //Skip a line
 //
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
