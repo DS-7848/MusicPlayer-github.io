@@ -50,7 +50,7 @@ color purpleInk = #00045F; //Hexidecimal
 color whiteInk = #FFFFFF;
 color resetInk = whiteInk;
 fill(purpleInk); //Ink, Grey Scale 0-255
-//textAlign (CENTER, CENTER);
+textAlign (CENTER, CENTER);
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 textFont(titleFont, fontSize);
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
