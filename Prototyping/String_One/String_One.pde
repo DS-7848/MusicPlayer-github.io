@@ -16,22 +16,34 @@ float stringDivHeight = appHeight*1/10;
 
 String title = "Test before final attempt";
 //
+//String upArrow = "../../";
+//String folder = "Images/";
+//String BestOfMe = "BestOfMe";
+//String fileExtensionJPG = ".jpg";
+//String imagePathway1 = upArrow + folder + BestOfMe + fileExtensionJPG;
 /*
 println("Start of Console"); //ERROR: if console memory is not enough
 String[] fontList = PFont.list(); //used for listing all fonts available on system
 printArray(fontList); //for listing all possible fonts that can be chosen
 */
-float fontSize = 50.0; //entire program font size
+float fontSize = appHeight; //entire program font size
 PFont titleFont; //Font variable name
 String gabriola = "Gabriola";
 titleFont = createFont (gabriola, fontSize);
 //Tools / Creat Font / Find Font / Do Not Press "OK"
 println(fontSize, gabriola, titleFont);
+fontSize = 52.0;
 //
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
+println(fontSize, gabriola, titleFont);
 color purpleInk = #00045F; //Hexidecimal
+color whiteInk = #FFFFFF;
+color resetInk = whiteInk;
 fill(purpleInk); //Ink, Grey Scale 0-255
+//textAlign (CENTER, CENTER);
+//Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 textFont(titleFont, fontSize);
 text( title, stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+fill(resetInk);
 //
