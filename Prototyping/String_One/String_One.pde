@@ -68,7 +68,7 @@ textAlign (CENTER, CENTER);
 textFont(titleFont, fontSize);
 float constantDecrease = 0.99; //99% of original or a 1% decrease
 //FOR Loop Error: Copy & Paste three times
-for ( i=1; i<=3; i++ ) {
+for ( int i=0; i<3; i++ ) {
   while ( textWidth( title ) > stringDivWidth[i] ) {
   //ERROR infinite loop, requires exit() & println()
   fontSize *= constantDecrease; //fontSize = fontSize*0.99;
@@ -77,10 +77,11 @@ for ( i=1; i<=3; i++ ) {
 } //End FOR Loop, Font Size Check in DIVs
 
 
-//WHILE Error Checl
-text( title, stringDivX1, stringDivY1, stringDivWidth1, stringDivHeight1 );
-text( title, stringDivX2, stringDivY2, stringDivWidth2, stringDivHeight2 );
-text( title, stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
+//WHILE Error Check
+for ( int i=0; i<3; i++) []
+text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
 fill(resetInk);
 //
 //End Program
