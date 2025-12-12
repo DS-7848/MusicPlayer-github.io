@@ -49,13 +49,13 @@ println("Font Size", fontSize);
  - choose Aspect Ratio that must be multiplied: fontSize/titleHeight
  - Rewriting fontSize with formulae
  */
-float divHeightGabriola = stringDivHeight;
+float divHeightGabriola = stringDivHeight1;
 float gabriolaAspectRatio = fontSizeGabriola / divHeightGabriola;
-fontSize = stringDivHeight*gabriolaAspectRatio;
+fontSize = stringDivHeight1*gabriolaAspectRatio;
 println("gabriola Aspect Ratio:", gabriolaAspectRatio);
 println(); //Skip a line
 //
-rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+rect( stringDivX1, stringDivY1, stringDivWidth, stringDivHeight1 );
 //
 println(fontSize, gabriola, titleFont);
 //Drawing Text
@@ -70,18 +70,19 @@ float constantDecrease = 0.99; //99% of original or a 1% decrease
 //FOR Loop Error: Copy & Paste three times
 for ( int i=0; i<3; i++ ) {
   while ( textWidth( title ) > stringDivWidth[i] ) {
-  //ERROR infinite loop, requires exit() & println()
-  fontSize *= constantDecrease; //fontSize = fontSize*0.99;
-  textFont(titleFont, fontSize);
+    //ERROR infinite loop, requires exit() & println()
+    fontSize *= constantDecrease; //fontSize = fontSize*0.99;
+    textFont(titleFont, fontSize);
   } //End WHILE Error Check Text-wrap
 } //End FOR Loop, Font Size Check in DIVs
 
 
 //WHILE Error Check
-for ( int i=0; i<3; i++) []
-text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
-text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
-text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+for ( int i=0; i<3; i++) {
+  text( title, stringDivX1, stringDivY1, stringDivWidth[i], stringDivHeight1 );
+}
+
+
 fill(resetInk);
 //
 //End Program

@@ -10,21 +10,28 @@ int appHeight = displayHeight; //height:500
 //println("\n\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\tSet Values, width:"+width, "height:"+height);
 //
 //Population
-float[] stringDivWidth = new float[3];
-float stringDivX1 = appWidth*1/4;
-float stringDivY1 = appHeight*1/10;
-stringDivWidth[1] = appWidth*1/2;
-float stringDivHeight1 = appHeight*1/10;
-float stringDivX2 = stringDivX1; //Cascading VARs
-float stringDivY2 = appHeight*3/10;
-stringDivWidth[2] = appWidth*1/4;
-float stringDivHeight2 = stringDivHeight1; //Cascading VARs
-float stringDivX3 = stringDivX1; //Cascading VARs
-float stringDivY3 = appHeight*5/10;
-stringDivWidth[3] = appWidth*5/8;
-float stringDivHeight3 = stringDivHeight1; //Cascading VARs
+int numberOfDIVs = 3;
+float[] stringDivX = new float[numberOfDIVs];
+float[] stringDivY = new float[numberOfDIVs];
+float[] stringDivWidth = new float[numberOfDIVs];
+float[] stringDivHeight = new float[numberOfDIVs];
+stringDivX[0] = appWidth*1/4;
+stringDivY[0] = appHeight*1/10;
+stringDivWidth[0] = appWidth*1/2;
+stringDivHeight[0] = appHeight*1/10;
+stringDivX[1] = stringDivX[0]; //Cascading VARs
+stringDivY[1] = appHeight*3/10;
+stringDivWidth[1] = appWidth*1/4;
+stringDivHeight[1] = stringDivHeight[0]; //Cascading VARs
+stringDivX[2] = stringDivX[0]; //Cascading VARs
+stringDivY[2] = appHeight*5/10;
+stringDivWidth[2] = appWidth*5/8;
+stringDivHeight[2] = stringDivHeight[0]; //Cascading VARs
 
-String title = "Test before final attempt";
+String[] text = new String[numberOfDIVs];
+text[0] = "Test before final attempt";
+text[1] = "Might be used for song times";
+text[2] = "Might use for Author";
 //
 //String upArrow = "../../";
 //String folder = "Images/";
@@ -48,15 +55,16 @@ println("Font Size", fontSize);
  - choose Aspect Ratio that must be multiplied: fontSize/titleHeight
  - Rewriting fontSize with formulae
  */
-float gabriolaAspectRatio = fontSizeGabriola / stringDivHeight1;
-fontSize = stringDivHeight1*gabriolaAspectRatio;
+float divHeightGabriola = stringDivHeight[0];
+float gabriolaAspectRatio = fontSizeGabriola / divHeightGabriola;
+fontSize = stringDivHeight[0]*gabriolaAspectRatio;
 println("gabriola Aspect Ratio:", gabriolaAspectRatio);
 println(); //Skip a line
 //
-rect( stringDivX1, stringDivY1, stringDivWidth1, stringDivHeight1 );
-rect( stringDivX2, stringDivY2, stringDivWidth2, stringDivHeight2 );
-rect( stringDivX3, stringDivY3, stringDivWidth3, stringDivHeight3 );
-//
+for (int i=0; i<numberOfDIVs; i++) {
+  rect( stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+}
+
 println(fontSize, gabriola, titleFont);
 //Drawing Text
 color purpleInk = #00045F; //Hexidecimal
@@ -68,20 +76,22 @@ textAlign (CENTER, CENTER);
 textFont(titleFont, fontSize);
 float constantDecrease = 0.99; //99% of original or a 1% decrease
 //FOR Loop Error: Copy & Paste three times
+int iWhile=0; //counts iterations of WHILE
 for ( int i=0; i<3; i++ ) {
-  while ( textWidth( title ) > stringDivWidth[i] ) {
-  //ERROR infinite loop, requires exit() & println()
-  fontSize *= constantDecrease; //fontSize = fontSize*0.99;
-  textFont(titleFont, fontSize);
+  while ( textWidth( text[i] ) > stringDivWidth[i] ) {
+    iWhile++;
+    //ERROR infinite loop, requires exit() & println()
+    fontSize *= constantDecrease; //fontSize = fontSize*0.99;
+    textFont(titleFont, fontSize);
   } //End WHILE Error Check Text-wrap
+  println("Iterations of WHILE", iWhile, "\tPixel difference of divWidth & textWidth:", stringDivWidth[i]-textWidth( text[i] ), "\tUsing", constantDecrease*100+"%" );
 } //End FOR Loop, Font Size Check in DIVs
 
 
 //WHILE Error Check
-for ( int i=0; i<3; i++) []
-text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
-text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
-text( title, stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+for ( int i=0; i<numberOfDIVs; i++ ) {
+  text( text[i], stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
+}
 fill(resetInk);
 //
 //End Program
