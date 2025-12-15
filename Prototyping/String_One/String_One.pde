@@ -95,3 +95,4 @@ for ( int i=0; i<numberOfDIVs; i++ ) {
 fill(resetInk);
 //
 //End Program
+//Future reference, when working on final project replace "numberOfDIVs" with actual amount. left it as that in the code for personal refrence when working on the final just in case I use more or less than 3 different variables.
