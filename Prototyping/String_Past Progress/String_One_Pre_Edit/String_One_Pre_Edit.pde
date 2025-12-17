@@ -17,15 +17,15 @@ float[] stringDivWidth = new float[numberOfDIVs];
 float[] stringDivHeight = new float[numberOfDIVs];
 stringDivX[0] = appWidth*1/4;
 stringDivY[0] = appHeight*1/10;
-stringDivWidth[0] = appWidth*1/3;
+stringDivWidth[0] = appWidth*1/2;
 stringDivHeight[0] = appHeight*1/10;
 stringDivX[1] = stringDivX[0]; //Cascading VARs
 stringDivY[1] = appHeight*3/10;
-stringDivWidth[1] = appWidth*1/6;
+stringDivWidth[1] = appWidth*1/4;
 stringDivHeight[1] = stringDivHeight[0]; //Cascading VARs
 stringDivX[2] = stringDivX[0]; //Cascading VARs
 stringDivY[2] = appHeight*5/10;
-stringDivWidth[2] = appWidth*3/8;
+stringDivWidth[2] = appWidth*5/8;
 stringDivHeight[2] = stringDivHeight[0]; //Cascading VARs
 
 String[] text = new String[numberOfDIVs];
@@ -77,7 +77,7 @@ textFont(titleFont, fontSize);
 float constantDecrease = 0.99; //99% of original or a 1% decrease
 //FOR Loop Error: Copy & Paste three times
 int iWhile=0; //counts iterations of WHILE
-for ( int i=0; i<numberOfDIVs; i++ ) {
+for ( int i=0; i<3; i++ ) {
   while ( textWidth( text[i] ) > stringDivWidth[i] ) {
     iWhile++;
     //ERROR infinite loop, requires exit() & println()
