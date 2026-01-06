@@ -22,4 +22,18 @@ int appWidth = width;
 int appHeight = height;
 //
 //Music Loading - STRUCTURED review
+minim = new Minim(this);
+String upArrow = "../../";
+String musicFolder = "Music/"; //Developer specific
+String songName1 = "BestOfMe";
+String fileExtension_mp3 = ".mp3";
 //
+String musicDirectory = upArrow + musicFolder; //concatenation
+String file = musicDirectory + songName1 + fileExtension_mp3;
+println("Music Pathway",musicDirectory);
+println("Full Music File Pathway", file);
+
+playList[currentSong] = minim.loadFile(file); //error: verify spelling and that the library was installed correctly
+//
+println("Did the music and sound load correctly");
+printArray(playList);
