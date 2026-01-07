@@ -31,7 +31,7 @@ songName[1] = "Cold";
 songName[2] = "Crown";
 String fileExtension_mp3 = ".mp3";
 for (int i=0; i<numberOfSongs; i++) {
- String[i] songName;
+ String songName;
 }
 //
 String musicDirectory = upArrow + musicFolder; //concatenation
