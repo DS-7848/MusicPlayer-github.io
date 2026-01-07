@@ -37,7 +37,9 @@ void setup() {
   songName[1] = "Cold";
   songName[2] = "Crown";
 //
-
+for (int i=0; i<numberOfSongs; i++){
+  songName[i]
+}
   String fileExtension_mp3 = ".mp3";
 
   //
