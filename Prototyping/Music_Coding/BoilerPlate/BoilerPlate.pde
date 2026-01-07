@@ -30,16 +30,14 @@ void setup() {
   //
   //Music Loading - STRUCTURED review
   minim = new Minim(this);
-  String upArrow = "../../";
+  String upArrow = "../../../";
   String musicFolder = "Music/"; //Developer specific
   String[] songName = new String[numberOfSongs];
   songName[0] = "BestOfMe";
   songName[1] = "Cold";
   songName[2] = "Crown";
 //
-  for ( int i=0; i<numberOfSongs; i++ ) {
-    String songName[]
-  }
+
   String fileExtension_mp3 = ".mp3";
 
   //
@@ -63,7 +61,10 @@ void setup() {
       */
   } //End of ERROR Check Music and Sound Effect Variables
   //
-//End setup
+  //Testing Audio Files
+  playList[currentSong].play();
+  //soundEffects[currentSong].play();
+} //End setup
 //
 void draw() {
 } //End draw
