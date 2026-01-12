@@ -13,6 +13,8 @@ float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, play
 //
 Boolean playButton=false;
 //
+color resetBackground, resetInk;
+//
 void setup() {
   //Display
   size(500, 400);
@@ -46,6 +48,12 @@ void setup() {
   //CANVAS: default background and ink
   resetBackground = white;
   resetInk = black;
+  //Button Colors
+  color
+  color red = #E53131;
+  color green = #0F9323;
+  color grayscale = 256/2; //Example of Gray Scale, Small amount of memory needed
+  color gray = #677169; //Example of Gray Scale, Large amount of memory needed
   //
 } //End setup
 //
@@ -64,7 +72,7 @@ void draw() {
 void mousePressed() {
     //Music Play Functions
   if ( playButton == true ) {
-    println("Play My Song");
+    println("Should begin the song");
   } else {
     println(" ");
   }
