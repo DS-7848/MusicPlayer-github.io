@@ -60,8 +60,8 @@ void setup() {
   playColorSymbol = red;
   playColorBackgroundActivated = cyan;
   playColorSymbolActivated = red;
-  quitBackground = green;
-  quitBackgroundActivated = cyan;
+  quitBackground = white;
+  quitBackgroundActivated = red;
   //
 } //End setup
 //
@@ -86,13 +86,13 @@ void draw() {
     fill(resetBackground);
   }//End Play Button Hover Over
   if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY && mouseY<quitDivY+quitDivHeight ) {
-    //fill();
+    fill(quitBackgroundActivated);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-    //fill();
+    fill(resetBackground);
   } else {
-    //fill();
+    fill(quitBackground);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-    //fill();
+    fill(resetBackground);
   }//End Quit Button Hover Over
   //
 } //End draw
