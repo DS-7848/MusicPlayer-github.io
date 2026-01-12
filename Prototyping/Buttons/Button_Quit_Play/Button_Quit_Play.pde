@@ -14,6 +14,7 @@ float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, play
 Boolean playButton=false;
 //
 color resetBackground, resetInk;
+color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
 //
 void setup() {
   //Display
@@ -31,7 +32,7 @@ void setup() {
   playDivY = appHeight * 4.5/10;
   playDivWidth = appWidth * 2/10;
   playDivHeight = appHeight * 1/10;
-  playSymbolX1 = playDivX + playDivWidth * 1/4;
+  playSymbolX1 = playDivX + playDivWidth * 2/8;
   playSymbolY1 = playDivY + playDivHeight * 1/4;
   playSymbolX2 = playSymbolX1 + playDivWidth * 1/2;
   playSymbolY2 = playDivY + playDivHeight * 1/2;
@@ -49,11 +50,16 @@ void setup() {
   resetBackground = white;
   resetInk = black;
   //Button Colors
-  color
   color red = #E53131;
   color green = #0F9323;
+  color cyan = #23E8E3;
   color grayscale = 256/2; //Example of Gray Scale, Small amount of memory needed
   color gray = #677169; //Example of Gray Scale, Large amount of memory needed
+  playColorBackground = green;
+  playColorSymbol = red;
+  playColorBackgroundActivated = cyan;
+  playColorSymbolActivated = red;
+  
   //
 } //End setup
 //
@@ -63,9 +69,19 @@ void draw() {
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     //println("Song should be playing");
     playButton = true;
+    fill(playColorBackgroundActivated);
+    rect(playDivX, playDivY, playDivWidth, playDivHeight);
+    fill(playColorSymbolActivated);
+    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+    fill(resetBackground);
   } else {
     //print(" ");
     playButton = false;
+    fill(playColorBackground);
+    rect(playDivX, playDivY, playDivWidth, playDivHeight);
+    fill(playColorSymbol);
+    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+    fill(resetBackground);
   }
 } //End draw
 //
