@@ -15,6 +15,7 @@ Boolean playButton=false;
 //
 color resetBackground, resetInk;
 color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
+color quitBackground, quitBackgroundActivated;
 //
 void setup() {
   //Display
@@ -59,7 +60,8 @@ void setup() {
   playColorSymbol = red;
   playColorBackgroundActivated = cyan;
   playColorSymbolActivated = red;
-
+  quitBackground = green;
+  quitBackgroundActivated = cyan;
   //
 } //End setup
 //
@@ -83,8 +85,16 @@ void draw() {
     triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
     fill(resetBackground);
   }//End Play Button Hover Over
-  if () {} else {}//End Quit Button Hover Over
-//
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY && mouseY<quitDivY+quitDivHeight ) {
+    //fill();
+    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+    //fill();
+  } else {
+    //fill();
+    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+    //fill();
+  }//End Quit Button Hover Over
+  //
 } //End draw
 //
 void mousePressed() {
