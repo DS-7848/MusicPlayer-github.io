@@ -37,7 +37,7 @@ void setup() {
   playSymbolY1 = playDivY + playDivHeight * 1/4;
   playSymbolX2 = playSymbolX1 + playDivWidth * 1/2;
   playSymbolY2 = playDivY + playDivHeight * 1/2;
-  playSymbolX3 = playSymbolX1;
+  playSymbolX3 = playDivX + playDivWidth * 2/8;
   playSymbolY3 = playDivY + playDivHeight * 3/4;
   //DIVs
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
@@ -46,7 +46,7 @@ void setup() {
   //
   //Color Population
   color black = 0; //Gray Scale, much smaller color, 256 bits
-  color white = 0; //Gray Scale
+  color white = 255; //Gray Scale
   //CANVAS: default background and ink
   resetBackground = white;
   resetInk = black;
