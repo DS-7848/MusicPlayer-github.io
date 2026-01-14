@@ -89,10 +89,14 @@ void draw() {
     fill(quitBackgroundActivated);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
     fill(resetBackground);
+    text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
+    fill(resetInk);
   } else {
     fill(quitBackground);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
     fill(resetBackground);
+    text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
+    fill(resetInk);
   }//End Quit Button Hover Over
   //
 } //End draw
