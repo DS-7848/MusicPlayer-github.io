@@ -11,10 +11,10 @@ float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
 //
-Boolean playButton=false;
+Boolean playButton=false, quitButton=false;
 //
 color resetBackground, resetInk;
-color quitButton;
+color quitButtonInk;
 color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
 color quitBackground, quitBackgroundActivated;
 //
@@ -63,7 +63,7 @@ void setup() {
   playColorSymbolActivated = red;
   quitBackground = white;
   quitBackgroundActivated = red;
-  quitButton = black;
+  quitButtonInk = black;
   //
 } //End setup
 //
@@ -91,14 +91,14 @@ void draw() {
     fill(quitBackgroundActivated);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
     fill(resetBackground);
-    fill(quitButton);
+    fill(quitButtonInk);
     text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
     fill(resetInk);
   } else {
     fill(quitBackground);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
     fill(resetBackground);
-    fill(quitButton);
+    fill(quitButtonInk);
     text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
     fill(resetInk);
   }//End Quit Button Hover Over
@@ -106,9 +106,15 @@ void draw() {
 } //End draw
 //
 void mousePressed() {
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
+    noLoop(); //adjusts the exit code location
+    exit(); //noLoop() forces the exit to happen here
+    println("Final line for draw command");
+  }
   //Music Play Functions
   if ( playButton == true ) {
     println("Should begin the song");
+    playButton=false;
   } else {
     println(" ");
   }
