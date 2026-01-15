@@ -46,6 +46,8 @@ void setup() {
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
   //
   //Color Population
+  nightMode=false;
+  codingColors();
   color black = 0; //Gray Scale, much smaller color, 256 bits
   color white = 255; //Gray Scale
   //CANVAS: default background and ink
@@ -107,20 +109,32 @@ void draw() {
 //
 void mousePressed() {
   if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
-    noLoop(); //adjusts the exit code location
-    exit(); //noLoop() forces the exit to happen here
-    println("Final line for draw command");
+    quitButton();
   }
   //Music Play Functions
   if ( playButton == true ) {
     println("Should begin the song");
     playButton=false;
   } else {
-    println(" ");
+    println("Music is not playing");
   }
 } //End Mouse Pressed
 //
 void keyPressed() {
+  //Note, CAPs Lock on Code: key=='[CAP]' || key=='[lowerCase]'
+  //CAUTION: Order Matters
+  if (key=='Q' || key=='q') {
+    quitButton();
+  } //Quit Button
+  if (key=='E' || key=='e') {
+    playButton = true;
+  } else {
+  playButton = false;
+  }
 } //End Key Pressed
-//
+void quitButton() {
+  noLoop(); //adjusts the exit code location
+  exit(); //noLoop() forces the exit to happen here
+  println("Final Line of mousePressed and finishes draw()");
+}//End Quit Button
 //End Main Program
