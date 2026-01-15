@@ -14,6 +14,7 @@ float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, play
 Boolean playButton=false;
 //
 color resetBackground, resetInk;
+color quitButton;
 color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
 color quitBackground, quitBackgroundActivated;
 //
@@ -62,6 +63,7 @@ void setup() {
   playColorSymbolActivated = red;
   quitBackground = white;
   quitBackgroundActivated = red;
+  quitButton = black;
   //
 } //End setup
 //
@@ -89,12 +91,14 @@ void draw() {
     fill(quitBackgroundActivated);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
     fill(resetBackground);
+    fill(quitButton);
     text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
     fill(resetInk);
   } else {
     fill(quitBackground);
     rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
     fill(resetBackground);
+    fill(quitButton);
     text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
     fill(resetInk);
   }//End Quit Button Hover Over
