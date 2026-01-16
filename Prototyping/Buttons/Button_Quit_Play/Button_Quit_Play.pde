@@ -17,7 +17,7 @@ color resetBackground, resetInk, resetBackgroundDay, resetInkDay, resetBackgroun
 color quitButtonInk;
 color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
 color quitBackground, quitBackgroundActivated;
-Boolean nightmode=false;
+Boolean nightMode=false;
 //
 void setup() {
   //Display
