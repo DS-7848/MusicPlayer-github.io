@@ -13,10 +13,11 @@ float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, play
 //
 Boolean playButton=false, quitButton=false;
 //
-color resetBackground, resetInk;
+color resetBackground, resetInk, resetBackgroundDay, resetInkDay, resetBackgroundNight, resetInkNight;
 color quitButtonInk;
 color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
 color quitBackground, quitBackgroundActivated;
+Boolean nightmode=false;
 //
 void setup() {
   //Display
@@ -127,11 +128,13 @@ void keyPressed() {
     quitButton();
   } //Quit Button
   if (key=='E' || key=='e') {
-    playButton = true;
-  } else {
-  playButton = false;
+    playButton();
   }
 } //End Key Pressed
+
+void playButton() {
+ playButton = true;
+}
 void quitButton() {
   noLoop(); //adjusts the exit code location
   exit(); //noLoop() forces the exit to happen here
