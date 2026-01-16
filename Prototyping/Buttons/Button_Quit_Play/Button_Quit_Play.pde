@@ -60,35 +60,15 @@ void draw() {
   //Button HoverOver
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     //println("Song should be playing");
-    playButton = true;
-    fill(playColorBackgroundActivated);
-    rect(playDivX, playDivY, playDivWidth, playDivHeight);
-    fill(playColorSymbolActivated);
-    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-    fill(resetBackground);
+    if (playButton == false) playButtonActivated();
   } else {
-    //print(" ");
-    playButton = false;
-    fill(playColorBackground);
-    rect(playDivX, playDivY, playDivWidth, playDivHeight);
-    fill(playColorSymbol);
-    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-    fill(resetBackground);
+    playButtonInactive();
+    if (playButton == true) playButtonActivated();
   }//End Play Button Hover Over
   if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY && mouseY<quitDivY+quitDivHeight ) {
-    fill(quitBackgroundActivated);
-    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-    fill(resetBackground);
-    fill(quitButtonInk);
-    text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
-    fill(resetInk);
+    quitButtonActivated();
   } else {
-    fill(quitBackground);
-    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-    fill(resetBackground);
-    fill(quitButtonInk);
-    text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
-    fill(resetInk);
+    quitButtonInactive();
   }//End Quit Button Hover Over
   //
 } //End draw
@@ -98,11 +78,14 @@ void mousePressed() {
     quitButton();
   }
   //Music Play Functions
-  if ( playButton == true ) {
+  if(mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight) {
+  if ( playButton == false ) {
     println("Should begin the song");
-    playButton=false;
+    playButton=true;
   } else {
+    playButton = false;
     println("Music is not playing");
+  }
   }
 } //End Mouse Pressed
 //
@@ -112,14 +95,7 @@ void keyPressed() {
   if (key=='Q' || key=='q') {
     quitButton();
   } //Quit Button
-  if (key=='E' || key=='e') {
-    playButton();
-  }
 } //End Key Pressed
-
-void playButton() {
- playButton = true;
-}
 void quitButton() {
   noLoop(); //adjusts the exit code location
   exit(); //noLoop() forces the exit to happen here
