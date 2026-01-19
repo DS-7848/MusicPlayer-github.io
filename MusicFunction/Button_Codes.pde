@@ -1,7 +1,8 @@
 /* Button Table
  -quitButton
- -DIV shapes
- -Music Shapes
+ -DIVs
+ -musicShapes
+ -hoverover
  */
 void quitButton() {
   noLoop(); //adjusts the exit code location
@@ -53,4 +54,20 @@ void playButtonInactive() {
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
   fill(resetBackground);
 }
+//
+void hoverOver() {
+    //Button HoverOver
+  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
+    //println("Song should be playing");
+    if (playButton == false) playButtonActivated();
+  } else {
+    playButtonInactive();
+    if (playButton == true) playButtonActivated();
+  }//End Play Button Hover Over
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY && mouseY<quitDivY+quitDivHeight ) {
+    quitButtonActivated();
+  } else {
+    quitButtonInactive();
+  }//End Quit Button Hover Over
+}//end code for hover over
 //End for the Code related to buttons

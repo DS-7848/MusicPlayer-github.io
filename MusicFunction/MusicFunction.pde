@@ -43,20 +43,7 @@ void setup() {
 //
 void draw() {
   //println ("Mouse Coordinates", mouseX, mouseY);
-  //Button HoverOver
-  if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
-    //println("Song should be playing");
-    if (playButton == false) playButtonActivated();
-  } else {
-    playButtonInactive();
-    if (playButton == true) playButtonActivated();
-  }//End Play Button Hover Over
-  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY && mouseY<quitDivY+quitDivHeight ) {
-    quitButtonActivated();
-  } else {
-    quitButtonInactive();
-  }//End Quit Button Hover Over
-  //
+  hoverOver();
 }//end for the draw code
 //
 void mousePressed() {
