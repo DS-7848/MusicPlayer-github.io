@@ -95,6 +95,9 @@ void keyPressed() {
   if (key=='Q' || key=='q') {
     quitButton();
   } //Quit Button
+  if (key=='N' || key=='n') {
+    colorPopulation();
+  }//Night Mode
 } //End Key Pressed
 void quitButton() {
   noLoop(); //adjusts the exit code location
