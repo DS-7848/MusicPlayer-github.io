@@ -56,7 +56,7 @@ void playButtonInactive() {
 }
 //
 void hoverOver() {
-    //Button HoverOver
+  //Button HoverOver
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
     //println("Song should be playing");
     if (playButton == false) playButtonActivated();
