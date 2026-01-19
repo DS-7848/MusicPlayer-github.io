@@ -31,13 +31,10 @@ void settings() {
 void setup() {
   //display canvas variables
   fullScreen(); //displayWidth //displayHeight
-  int appWidth = displayWidth;
-  int appHeight = displayHeight;
+  appWidth = displayWidth;
+  appHeight = displayHeight;
+  divPopulation();
   //DIVs
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-  //
   //Color Population
   nightMode=false;
   color black = 0; //Gray Scale, much smaller color, 256 bits
