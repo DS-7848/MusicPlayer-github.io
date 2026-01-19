@@ -36,9 +36,8 @@ void setup() {
   divPopulation();
   DIVs();
   musicShapes();
-  colorPopulation();
-  //Color Population
   nightMode=false;
+  colorPopulation();
   //
 }//end for the setup code
 //
