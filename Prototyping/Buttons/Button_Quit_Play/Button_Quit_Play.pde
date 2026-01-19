@@ -78,14 +78,14 @@ void mousePressed() {
     quitButton();
   }
   //Music Play Functions
-  if(mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight) {
-  if ( playButton == false ) {
-    println("Should begin the song");
-    playButton=true;
-  } else {
-    playButton = false;
-    println("Music is not playing");
-  }
+  if (mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight) {
+    if ( playButton == false ) {
+      println("Should begin the song");
+      playButton=true;
+    } else {
+      playButton = false;
+      println("Music is not playing");
+    }
   }
 } //End Mouse Pressed
 //
@@ -102,6 +102,6 @@ void keyPressed() {
 void quitButton() {
   noLoop(); //adjusts the exit code location
   exit(); //noLoop() forces the exit to happen here
-  println("Final Line of mousePressed and finishes draw()");
+  println("End of quit button");
 }//End Quit Button
 //End Main Program
