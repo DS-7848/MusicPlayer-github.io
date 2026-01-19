@@ -18,6 +18,16 @@ color quitButtonInk;
 color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
 color quitBackground, quitBackgroundActivated;
 Boolean nightMode=false;
+/*
+void settings() {
+ println(displayWidth, displayHeight);
+ int shorterSide = ( displayWidth > displayHeight ) ? displayHeight : displayWidth ;
+ shorterSide *= 0.9; //90% of the WINDOW Frame
+ size(shorterSide, shorterSide); 
+ println("Display", displayWidth, displayHeight, shorterSide);
+ println("CANVAS Size Variables for setup()", width, height);
+ }//End settings
+ */
 void setup() {
   fullScreen(); //displayWidth //displayHeight
   int appWidth = displayWidth;
