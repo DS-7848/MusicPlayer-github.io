@@ -22,7 +22,7 @@ void settings() {
  }//End settings
  */
 void setup() {
- //display canvas variables
+  //display canvas variables
   fullScreen(); //displayWidth //displayHeight
   appWidth = displayWidth;
   appHeight = displayHeight;
@@ -30,7 +30,7 @@ void setup() {
   DIVs();
   musicShapes();
   nightMode=false;
-  colorPopulation(); 
+  colorPopulation();
 }
 //end for the setup code
 //

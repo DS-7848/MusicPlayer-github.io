@@ -1,4 +1,4 @@
-println("Display VARS", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\tSet Values, width:"+width, "height:"+height);
+//println("Display VARS", "appWidth:"+appWidth, "appHeight:"+appHeight, "\n\t\t\t\t\tFullScreen, displayWidth:"+displayWidth, "displayHeight:"+displayHeight, "\n\t\t\t\t\tSet Values, width:"+width, "height:"+height);
 //
 //Population
 float imageDivX = appWidth*1/4;
@@ -27,7 +27,7 @@ int imageHeight1 = 500;
 //Aspect Ratio
 float image1AspectRatio_GreaterOne = ( imageWidth1 >= imageHeight1 ) ? float(imageWidth1)/float(imageHeight1) : float(imageHeight1)/float(imageWidth1) ;
 //
-println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
+//println("Aspect Ratio >1", image1AspectRatio_GreaterOne, "Testing for Decimals, formula", imageWidth1/imageHeight1);
 //Algorithm Decisions (choice)
 float imageWidthAdjusted1 = imageDivWidth;
 float imageHeightAdjusted1 = ( imageWidth1 >= imageDivWidth ) ? imageWidthAdjusted1 * image1AspectRatio_GreaterOne : imageWidthAdjusted1 / image1AspectRatio_GreaterOne ;
@@ -53,7 +53,7 @@ if ( imageHeightAdjusted1 > imageDivHeight) {
 //
 
 //DIV
-rect( imageDivX, imageDivY, imageDivWidth, imageDivHeight );
+divPopulation();
 //
 //image( image1, imageDivX, imageDivY, imageDivWidth, imageDivHeight );
 image( image1, imageDivX, imageDivY, imageWidthAdjusted1, imageHeightAdjusted1 );
