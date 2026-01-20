@@ -1,0 +1,69 @@
+//Global Variables
+int appWidth, appHeight;
+float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
+float playDivX, playDivY, playDivWidth, playDivHeight;
+float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
+//
+Boolean playButton=false, quitButton=false;
+//
+color resetBackground, resetInk, resetBackgroundDay, resetInkDay, resetBackgroundNight, resetInkNight;
+color quitButtonInk;
+color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
+color quitBackground, quitBackgroundActivated;
+Boolean nightMode=false;
+/*
+void settings() {
+ println(displayWidth, displayHeight);
+ int shorterSide = ( displayWidth > displayHeight ) ? displayHeight : displayWidth ;
+ shorterSide *= 0.9; //90% of the WINDOW Frame
+ size(shorterSide, shorterSide);
+ println("Display", displayWidth, displayHeight, shorterSide);
+ println("canvas Size Variables for setup()", width, height);
+ }//End settings
+ */
+void setup() {
+  //display canvas variables
+  fullScreen(); //displayWidth //displayHeight
+  appWidth = displayWidth;
+  appHeight = displayHeight;
+  divPopulation();
+  DIVs();
+  musicShapes();
+  nightMode=false;
+  colorPopulation();
+  //
+}//end for the setup code
+//
+void draw() {
+  //println ("Mouse Coordinates", mouseX, mouseY);
+  hoverOver();
+}//end for the draw code
+//
+void mousePressed() {
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
+    quitButton();
+  }
+  //Music Play Functions
+  if (mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight) {
+    if ( playButton == false ) {
+      println("Should begin the song");
+      playButton=true;
+    } else {
+      playButton = false;
+      println("Music is not playing");
+    }
+  }
+}//end for the mouse pressed code
+//
+void keyPressed() {
+  //Note, CAPs Lock on Code: key=='[CAP]' || key=='[lowerCase]'
+  //CAUTION: Order Matters
+  if (key=='Q' || key=='q') {
+    quitButton();
+  } //Quit Button
+  if (key=='N' || key=='n') {
+    colorPopulation();
+  }//Night Mode
+}//end for the key pressed code
+//
+//
