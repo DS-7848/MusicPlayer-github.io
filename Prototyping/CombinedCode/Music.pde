@@ -18,6 +18,7 @@ int currentSong = numberOfSongs - numberOfSongs; //zero, math property
   String upArrow = "../../../";
   String musicFolder = "Music/"; //Developer specific
   String songName[] = new String[numberOfSongs];
+  String[] songName;
   songName[0] = "BestOfMe";
   songName[1] = "Cold";
   songName[2] = "Crown";
