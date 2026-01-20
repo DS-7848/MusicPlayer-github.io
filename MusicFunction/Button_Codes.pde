@@ -11,47 +11,57 @@ void quitButton() {
 }//end for the quit button code
 //
 void DIVs() {
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
+  quitDIV();
+  playDIV();
 }// end for the divs
+void quitDIV() {
+  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+}//end of quit button div code
+void playDIV() {
+  rect(playDivX, playDivY, playDivWidth, playDivHeight);
+}//end for play button div code
+//
+void playButtonSymbol() {
+  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+}//end play button symbol
 //
 void musicShapes() {
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+  
 }//end for the music shapes code
 //
 void quitButtonActivated() {
   fill(quitBackgroundActivated);
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+  quitDIV();
   fill(resetBackground);
   fill(quitButtonInk);
-  text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
+  easyTextQuitButton();
   fill(resetInk);
 }
 //
 void quitButtonInactive() {
   fill(quitBackground);
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+  quitDIV();
   fill(resetBackground);
   fill(quitButtonInk);
-  text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
+  easyTextQuitButton();
   fill(resetInk);
 }
 //
 void playButtonActivated() {
   playButton = true;
   fill(playColorBackgroundActivated);
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
+  playDIV();
   fill(playColorSymbolActivated);
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+  playButtonSymbol();
   fill(resetBackground);
 }
 //
 void playButtonInactive() {
   playButton = false;
   fill(playColorBackground);
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
+  playDIV();
   fill(playColorSymbol);
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+  playButtonSymbol();
   fill(resetBackground);
 }
 //
