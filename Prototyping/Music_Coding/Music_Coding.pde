@@ -33,11 +33,12 @@ String fileExtension_mp3 = ".mp3";
 
 //
 String musicDirectory = upArrow + musicFolder; //concatenation
-String file = musicDirectory + songName[i] + fileExtension_mp3;
-println("Music Pathway",musicDirectory);
-println("Full Music File Pathway", file);
-
-playList[currentSong] = minim.loadFile(file); //error: verify spelling and that the library was installed correctly
+for (int i = 0; i < numberOfSongs; i++) {
+  String file = musicDirectory + songName[i] + fileExtension_mp3;
+  println("Music Pathway", musicDirectory);
+  println("Full Music File Pathway", file);
+  playList[i] = minim.loadFile(file); //error: verify spelling and that the library was installed correctly
+}
 //
 println("Did the music and sound load correctly");
 printArray(playList);

@@ -6,7 +6,7 @@ AudioPlayer[] playList = new AudioPlayer[numberOfSongs];
 AudioPlayer[] soundEffects = new AudioPlayer[numberOfSoundEffects];
 int currentSong = numberOfSongs - numberOfSongs; //zero, math property
 //
-void setup() {
+//void setup() {
   //Display
   size(700, 500); //Width //Height
   //fullScreen(); //DisplayWidth //DisplayHeight
@@ -17,14 +17,13 @@ void setup() {
   minim = new Minim(this);
   String upArrow = "../../../";
   String musicFolder = "Music/"; //Developer specific
-  String[] songName = new String[numberOfSongs];
+  String songName[] = new String[numberOfSongs];
   songName[0] = "BestOfMe";
   songName[1] = "Cold";
   songName[2] = "Crown";
-}
 //
 for (int i=0; i<numberOfSongs; i++){
-  songName[i]
+  String file = musicDirectory + songName[i] + fileExtension_mp3;
 }
   String fileExtension_mp3 = ".mp3";
 
@@ -34,7 +33,7 @@ for (int i=0; i<numberOfSongs; i++){
   println("Music Pathway", musicDirectory);
   println("Full Music File Pathway", file);
 
-  playList[currentSong] = minim.loadFile(file); //error: verify spelling and that the library was installed correctly
+  playList[i] = minim.loadFile(file); //error: verify spelling and that the library was installed correctly
   //
   //ERROR Check Music and Sound Effect Variables
   //Thrown by commenting out FILE, playList[] or soundEffects[]
@@ -52,15 +51,3 @@ for (int i=0; i<numberOfSongs; i++){
   //Testing Audio Files
   playList[currentSong].play();
   //soundEffects[currentSong].play();
-//End setup
-//
-void draw() {
-} //End draw
-//
-void mousePressed() {
-} //End Mouse Pressed
-//
-void keyPressed() {
-} //End Key Pressed
-//
-//End MAIN Program
