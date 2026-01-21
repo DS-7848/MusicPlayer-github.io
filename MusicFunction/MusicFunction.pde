@@ -39,6 +39,7 @@ void setup() {
   musicShapes();
   nightMode=false;
   colorPopulation();
+  musicSetup();
   //
 }//end for the setup code
 //
