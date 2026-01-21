@@ -10,3 +10,8 @@ void easyTextQuitButton() {
 }//end for easy text code
 //
 //end subprogram text code
+void textSetup() {
+  float fontSize = appHeight;
+  PFont titleFont;
+  String gabriola = "Gabriola";
+}
