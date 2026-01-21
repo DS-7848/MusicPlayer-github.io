@@ -82,6 +82,34 @@ void keyPressed() {
       playList[currentSong].play();
     }
   }
+  if (key=='S' | key=='s') { //pause and rewind button
+    playList[currentSong].pause(); //press key once
+  } else {
+    playList[currentSong].rewind(); //press key twice
+  }
+  if (key=='W' || key=='w') { //next button
+    if (playList[currentSong].isPlaying()) {
+      playList[currentSong].pause();
+      playList[currentSong].rewind();
+      //
+      if (currentSong==numberOfSongs-1) {
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
+      playList[currentSong].play();
+    } else {
+      //
+      playList[currentSong].rewind();
+      //
+      if (currentSong==numberOfSongs-1) {
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
+    }
+  }
+  if (key=='Y' || key=='y') currentSong = int(random(numberOfSongs)); //does a random song
 }//end for the key pressed code
 //
 //
