@@ -14,9 +14,11 @@ void DIVs() {
   quitDIV();
   playDIV();
 }// end for the divs
+//
 void quitDIV() {
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
 }//end of quit button div code
+//
 void playDIV() {
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
 }//end for play button div code
@@ -26,7 +28,7 @@ void playButtonSymbol() {
 }//end play button symbol
 //
 void musicShapes() {
-  
+  playButtonSymbol();
 }//end for the music shapes code
 //
 void quitButtonActivated() {
@@ -36,7 +38,7 @@ void quitButtonActivated() {
   fill(quitButtonInk);
   easyTextQuitButton();
   fill(resetInk);
-}
+}//end for quit button activated
 //
 void quitButtonInactive() {
   fill(quitBackground);
@@ -45,25 +47,23 @@ void quitButtonInactive() {
   fill(quitButtonInk);
   easyTextQuitButton();
   fill(resetInk);
-}
+}//end for quit button inactive
 //
 void playButtonActivated() {
-  playButton = true;
   fill(playColorBackgroundActivated);
   playDIV();
   fill(playColorSymbolActivated);
   playButtonSymbol();
   fill(resetBackground);
-}
+}//end for play button activated
 //
 void playButtonInactive() {
-  playButton = false;
   fill(playColorBackground);
   playDIV();
   fill(playColorSymbol);
   playButtonSymbol();
   fill(resetBackground);
-}
+}//end for play button inactive
 //
 void hoverOver() {
   //Button HoverOver

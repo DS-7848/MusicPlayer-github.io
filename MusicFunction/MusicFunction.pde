@@ -33,6 +33,7 @@ void setup() {
   fullScreen(); //displayWidth //displayHeight
   appWidth = displayWidth;
   appHeight = displayHeight;
+  //
   divPopulation();
   DIVs();
   musicShapes();
@@ -71,6 +72,16 @@ void keyPressed() {
   if (key=='N' || key=='n') {
     colorPopulation();
   }//Night Mode
+  if (key=='P' || key=='p') playList[currentSong].loop(0);
+  //
+  if (key=='O' || key=='o') { //pause button
+    //
+    if (playList[currentSong].isPlaying()) {
+      playLisy[currentSong].pause();
+    } else {
+      playList[currentSong].play();
+    }
+  }
 }//end for the key pressed code
 //
 //
