@@ -13,6 +13,7 @@ void quitButton() {
 void DIVs() {
   quitDIV();
   playDIV();
+  titleDIV();
 }// end for the divs
 //
 void quitDIV() {
@@ -23,6 +24,9 @@ void playDIV() {
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
 }//end for play button div code
 //
+void titleDIV() {
+  rect(stringDivX, stringDivY, stringDivWidth, stringDivHeight);
+}//end of title div code
 void playButtonSymbol() {
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
 }//end play button symbol
