@@ -14,4 +14,8 @@ void textSetup() {
   float fontSize = appHeight;
   PFont titleFont;
   String gabriola = "Gabriola";
+  titleFont = createFont(gabriola, fontSize);
+  //
+  float fontSizeGabriola = 83.0;
+  float gabriolaAspectRatio = fontSizeGabriola
 }
