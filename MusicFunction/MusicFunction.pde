@@ -77,7 +77,7 @@ void keyPressed() {
   if (key=='O' || key=='o') { //pause button
     //
     if (playList[currentSong].isPlaying()) {
-      playLisy[currentSong].pause();
+      playList[currentSong].pause();
     } else {
       playList[currentSong].play();
     }
