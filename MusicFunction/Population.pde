@@ -3,6 +3,8 @@
  -colorPopulation
  -
  */
+//Global Variables
+float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
 //
 void divPopulation() {
   quitDivX = appWidth * 9/10;

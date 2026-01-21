@@ -27,6 +27,7 @@ void playDIV() {
 void titleDIV() {
   rect(stringDivX, stringDivY, stringDivWidth, stringDivHeight);
 }//end of title div code
+//
 void playButtonSymbol() {
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
 }//end play button symbol
