@@ -40,6 +40,7 @@ void setup() {
   nightMode=false;
   colorPopulation();
   musicSetup();
+  textSetup;
   //
 }//end for the setup code
 //
