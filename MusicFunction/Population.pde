@@ -23,10 +23,10 @@ void divPopulation() {
   playSymbolX3 = playDivX + playDivWidth * 2/8;
   playSymbolY3 = playDivY + playDivHeight * 3/4;
   //
-  stringDivX = 1/4;
-  stringDivY = 1/10;
-  stringDivWidth = 1/3;
-  stringDivHeight = 1/10;
+  stringDivX = appWidth*1/4;
+  stringDivY = appHeight*1/10;
+  stringDivWidth = appWidth*1/3;
+  stringDivHeight = appHeight*1/10;
 }//end for the quit-play div code
 //
 void colorPopulation() {
