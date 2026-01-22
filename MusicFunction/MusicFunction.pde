@@ -41,7 +41,7 @@ void setup() {
   colorPopulation();
   musicSetup();
   textSetup();
-  testMetaData();
+  //testMetaData();
   //
 }//end for the setup code
 //
