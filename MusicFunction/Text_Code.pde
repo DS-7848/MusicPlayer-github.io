@@ -16,6 +16,7 @@ void textSetup() {
   String gabriola = "Gabriola";
   titleFont = createFont(gabriola, fontSize);
   //
-  float fontSizeGabriola = 83.0;
-  float gabriolaAspectRatio = fontSizeGabriola
-}
+  float fontSizeGabriola = 80.0;
+  float gabriolaAspectRatio = fontSizeGabriola / stringDivHeight;
+  fontSize = stringDivHeight*gabriolaAspectRatio;
+}//End of code for text subprogram

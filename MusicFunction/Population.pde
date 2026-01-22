@@ -5,6 +5,7 @@
  */
 //Global Variables
 float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
+color resetBlackInk, resetWhiteInk, purpleInk;
 //
 void divPopulation() {
   quitDivX = appWidth * 9/10;
@@ -21,6 +22,11 @@ void divPopulation() {
   playSymbolY2 = playDivY + playDivHeight * 1/2;
   playSymbolX3 = playDivX + playDivWidth * 2/8;
   playSymbolY3 = playDivY + playDivHeight * 3/4;
+  //
+  stringDivX = 1/4;
+  stringDivY = 1/10;
+  stringDivWidth = 1/3;
+  stringDivHeight = 1/10;
 }//end for the quit-play div code
 //
 void colorPopulation() {
@@ -61,6 +67,11 @@ void colorPopulation() {
     quitBackgroundActivated = red;
     quitButtonInk = black;
   }
+  //
+  //Ink
+  resetBlackInk = black; //night mode
+  resetWhiteInk = white;
+  purpleInk = #00045F; //day mode
 }//end for color population code
 //
 //end population program
