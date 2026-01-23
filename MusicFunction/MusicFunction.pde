@@ -5,19 +5,6 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
-//Global Variables
-int appWidth, appHeight;
-float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
-float playDivX, playDivY, playDivWidth, playDivHeight;
-float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
-//
-Boolean playButton=false, quitButton=false;
-//
-color resetBackground, resetInk, resetBackgroundDay, resetInkDay, resetBackgroundNight, resetInkNight;
-color quitButtonInk;
-color playColorBackground, playColorSymbol, playColorBackgroundActivated, playColorSymbolActivated;
-color quitBackground, quitBackgroundActivated;
-Boolean nightMode=false;
 /*
 void settings() {
  println(displayWidth, displayHeight);
@@ -41,13 +28,17 @@ void setup() {
   colorPopulation();
   musicSetup();
   textSetup();
-  //testMetaData();
+  testMetaData();
   //
 }//end for the setup code
 //
 void draw() {
   //println ("Mouse Coordinates", mouseX, mouseY);
   hoverOver();
+  //
+  saveSongTitle();
+  drawText();
+  //
 }//end for the draw code
 //
 void mousePressed() {
@@ -110,6 +101,13 @@ void keyPressed() {
       } else {
         currentSong++;
       }
+    }
+  }
+  if (key=='M' || key=='m') { //mute
+    if (playList[currentSong].isMuted()) {
+      playList[currentSong].unmute();
+    } else {
+      playList[currentSong].mute();
     }
   }
   if (key=='Y' || key=='y') currentSong = int(random(numberOfSongs)); //does a random song

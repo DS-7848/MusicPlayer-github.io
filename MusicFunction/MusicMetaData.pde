@@ -19,8 +19,9 @@
  Encoded: meta.encoded()
  */
 //
-//Global Variable
-AudioMetaData[] playListMetaData = new AudioMetaData[numberOfSongs];
+void metaDataFileLoading() {
+  playListMetaData[currentSong] = playList[currentSong].getMetaData();
+}//end of code for meta data file loading
 //
 void testMetaData() {
   //Print What is available on a particular song
@@ -28,6 +29,7 @@ void testMetaData() {
   println();
   println( "File Name: " + playListMetaData[currentSong].fileName() );
   println( "Length (in milliseconds): " + playListMetaData[currentSong].length() );
+  println( "Length (in seconds): " + ( playListMetaData[currentSong].length() )/1000 );
   println( "Title: " + playListMetaData[currentSong].title() );
   println( "Author: " + playListMetaData[currentSong].author() );
   println( "Album: " + playListMetaData[currentSong].album() );
@@ -44,4 +46,13 @@ void testMetaData() {
   println( "Encoded: " + playListMetaData[currentSong].encoded() );
 }//end of code for test meta data
 //
+void saveSongTitle() {
+  if(playList[currentSong].isPlaying() == true) {
+    //titleDIV();
+    songTitle = playListMetaData[currentSong].title();
+  } else {
+    //titleDIV();
+    songTitle = "No song is actively been playing";
+  }
+}//end of code for save song title
 //end of code for meta data subprogram

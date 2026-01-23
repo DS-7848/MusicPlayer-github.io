@@ -1,14 +1,6 @@
 /* Music Subprogram
  */
 //
-//Global Variables
-Minim minim;
-int numberOfSongs = 3;
-int numberOfSoundEffects = 1;
-AudioPlayer[] playList = new AudioPlayer[numberOfSongs];
-AudioPlayer[] soundEffects = new AudioPlayer[numberOfSoundEffects];
-int currentSong = numberOfSongs - numberOfSongs; //must have a sum of 0
-//
 void musicSetup() {
   minim = new Minim(this);
   String upArrow = "../";
@@ -30,6 +22,7 @@ void musicSetup() {
   for (int i=0; i<numberOfSongs; i++) {
     file = musicDirectory + songName[i] + fileExtension_mp3;
     playList[currentSong] = minim.loadFile(file);
+    metaDataFileLoading();
     currentSong++;
   }//end for file code
   currentSong=0;

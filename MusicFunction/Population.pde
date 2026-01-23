@@ -3,9 +3,6 @@
  -colorPopulation
  -
  */
-//Global Variables
-float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
-color resetBlackInk, resetWhiteInk, purpleInk;
 //
 void divPopulation() {
   quitDivX = appWidth * 9/10;
@@ -27,7 +24,7 @@ void divPopulation() {
   stringDivY = appHeight*1/10;
   stringDivWidth = appWidth*1/3;
   stringDivHeight = appHeight*1/10;
-}//end for the quit-play div code
+}//end for the div population code
 //
 void colorPopulation() {
   color black = 0; //Gray Scale, much smaller color, 256 bits
@@ -43,6 +40,7 @@ void colorPopulation() {
   color red = #E53131;
   color green = #0F9323;
   color cyan = #23E8E3;
+  color pink = #E31BB8;
   color darkGray = grayscale;
   color lightGray = gray;
   if (nightMode == true) {
@@ -55,6 +53,7 @@ void colorPopulation() {
     quitBackground = darkGray;
     quitBackgroundActivated = red;
     quitButtonInk = black;
+    titleInk = darkGray;
   } else
   {
     resetBackground = resetBackgroundDay;
@@ -66,12 +65,9 @@ void colorPopulation() {
     quitBackground = white;
     quitBackgroundActivated = red;
     quitButtonInk = black;
+    titleInk = pink;
   }
   //
-  //Ink
-  resetBlackInk = black; //night mode
-  resetWhiteInk = white;
-  purpleInk = #00045F; //day mode
 }//end for color population code
 //
 //end population program
