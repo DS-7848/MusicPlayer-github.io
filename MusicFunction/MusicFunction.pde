@@ -63,54 +63,66 @@ void keyPressed() {
   if (key=='Q' || key=='q') {
     quitButton();
   } //Quit Button
-  if (key=='N' || key=='n') {
+  if (key=='D' || key=='d') {
+    if (nightMode == false) {
+      nightMode = true;
+    } else {
+      nightMode = false;
+    }
     colorPopulation();
-  }//Night Mode
-  if (key=='P' || key=='p') playList[currentSong].loop(0);
-  //
-  if (key=='O' || key=='o') { //pause button
+  } //night mode
+    if (key=='P' || key=='p') playList[currentSong].loop(0); //play
     //
-    if (playList[currentSong].isPlaying()) {
-      playList[currentSong].pause();
-    } else {
-      playList[currentSong].play();
-    }
-  }
-  if (key=='S' | key=='s') { //pause and rewind button
-    playList[currentSong].pause(); //press key once
-  } else {
-    playList[currentSong].rewind(); //press key twice
-  }
-  if (key=='W' || key=='w') { //next button
-    if (playList[currentSong].isPlaying()) {
-      playList[currentSong].pause();
-      playList[currentSong].rewind();
+    if (key=='O' || key=='o') { //pause button
       //
-      if (currentSong==numberOfSongs-1) {
-        currentSong = 0;
+      if (playList[currentSong].isPlaying()) {
+        playList[currentSong].pause();
       } else {
-        currentSong++;
-      }
-      playList[currentSong].play();
-    } else {
-      //
-      playList[currentSong].rewind();
-      //
-      if (currentSong==numberOfSongs-1) {
-        currentSong = 0;
-      } else {
-        currentSong++;
+        playList[currentSong].play();
       }
     }
-  }
-  if (key=='M' || key=='m') { //mute
-    if (playList[currentSong].isMuted()) {
-      playList[currentSong].unmute();
-    } else {
-      playList[currentSong].mute();
+    if (key=='S' | key=='s') { //pause and rewind button
+      if (playList[currentSong].isPlaying()) {
+        playList[currentSong].pause(); //single tap
+      } else {
+        playList[currentSong].rewind(); //double tap
+      }
     }
-  }
-  if (key=='Y' || key=='y') currentSong = int(random(numberOfSongs)); //does a random song
-}//end for the key pressed code
-//
-//
+    if ( key=='L' || key=='l' ) playList[currentSong].loop(1); // Loop ONCE: Plays, then plays again, then stops & rewinds
+    if ( key=='K' || key=='k' ) playList[currentSong].loop(); // Loop Infinitely
+    if ( key=='F' || key=='f' ) playList[currentSong].skip( 10000 ); // Fast Forward, Rewind, & Play Again
+    if ( key=='R' || key=='r' ) playList[currentSong].skip( -10000 ); // Fast Reverse & Play
+    if (key=='W' || key=='w') { //mute
+      if (playList[currentSong].isMuted()) {
+        playList[currentSong].unmute();
+      } else {
+        playList[currentSong].mute();
+      }
+    }
+    //
+    if ( key=='N' || key=='n' ) { //next button
+      if ( playList[currentSong].isPlaying() ) {
+        playList[currentSong].pause();
+        playList[currentSong].rewind();
+        //
+        if (currentSong==numberOfSongs-1) {
+          currentSong = 0;
+        } else {
+          currentSong++;
+        }
+        playList[currentSong].play();
+      } else {
+        //
+        playList[currentSong].rewind();
+        //
+        if (currentSong==numberOfSongs-1) {
+          currentSong = 0;
+        } else {
+          currentSong++;
+        }
+      }
+    }
+    if (key=='Y' || key=='y') currentSong = int(random(numberOfSongs)); //does a random song
+  }//end for the key pressed code
+  //
+  //
