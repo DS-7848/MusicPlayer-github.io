@@ -28,4 +28,6 @@ String songTitle;
 float fontSize=0;
 PFont titleFont;
 //
+PImage[] albumArt = new PImage[numberOfSongs];
+//
 //end of code for global variables

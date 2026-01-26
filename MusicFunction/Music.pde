@@ -26,6 +26,14 @@ void musicSetup() {
     currentSong++;
   }//end for file code
   currentSong=0;
+  //
+  String imagesDirectory = upArrow + "Images/";
+  String fileExtension_jpg = ".jpg";
+  for (int i=0; i<numberOfSongs; i++) {
+    file = imagesDirectory + songName[i] + fileExtension_jpg;
+    albumArt[i] = loadImage(file);
+  }//end for image loading
+  //
   file = soundEffectsDirectory + soundEffect + fileExtension_mp3;
   soundEffects[currentSong] = minim.loadFile(file);
   //

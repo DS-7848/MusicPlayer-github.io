@@ -33,6 +33,7 @@ void setup() {
 }//end for the setup code
 //
 void draw() {
+  image(albumArt[currentSong], 0, 0, appWidth, appHeight);
   //println ("Mouse Coordinates", mouseX, mouseY);
   hoverOver();
   //

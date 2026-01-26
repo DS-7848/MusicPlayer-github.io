@@ -21,7 +21,7 @@ void divPopulation() {
   playSymbolY3 = playDivY + playDivHeight * 3/4;
   //
   stringDivX = appWidth*1/4;
-  stringDivY = appHeight*1/10;
+  stringDivY = appHeight*1/5;
   stringDivWidth = appWidth*1/3;
   stringDivHeight = appHeight*1/10;
 }//end for the div population code
