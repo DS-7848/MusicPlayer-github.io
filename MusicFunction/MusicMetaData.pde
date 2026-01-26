@@ -47,12 +47,12 @@ void testMetaData() {
 }//end of code for test meta data
 //
 void saveSongTitle() {
-  if(playList[currentSong].isPlaying() == true) {
+  if (playList[currentSong].isPlaying() == true) {
     //titleDIV();
     songTitle = playListMetaData[currentSong].title();
   } else {
     //titleDIV();
-    songTitle = "No song is actively been playing";
+    songTitle = "No song is active";
   }
 }//end of code for save song title
 //end of code for meta data subprogram
